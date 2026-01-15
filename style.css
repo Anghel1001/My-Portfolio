@@ -1,0 +1,171 @@
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --card: #f4f4f4;
+    --border: #dddddd;
+  }
+  
+  body.dark {
+    --bg: #0f0f0f;
+    --text: #f5f5f5;
+    --card: #1b1b1b;
+    --border: #333333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .hero {
+    padding: 80px 10%;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    color: gray;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text button {
+    padding: 10px 22px;
+    border-radius: 12px;
+    border: 2px solid var(--text);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-text button:hover {
+    background: var(--text);
+    color: var(--bg);
+  }
+  
+  .photo-card {
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+  }
+  
+  .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  main {
+    padding: 60px 10%;
+    display: grid;
+    gap: 40px;
+  }
+  
+  .card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+  }
+  
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: var(--text);
+    margin: 15px 0;
+  }
+  
+  .skill-grid,
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+  }
+  
+  .skill-grid span,
+  .project {
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.2s ease;
+  }
+  
+  .skill-grid span:hover,
+  .project:hover {
+    transform: translateY(-4px);
+  }
+  
+  form {
+    display: grid;
+    gap: 12px;
+  }
+  
+  input,
+  textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  form button {
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--text);
+    color: var(--bg);
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: gray;
+  }
+  
+  .fade-in {
+    animation: fade 0.8s ease forwards;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
